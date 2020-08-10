@@ -1,11 +1,13 @@
 package com.sutlac.javaspringboot.talha.sutlac.dao;
 
 import com.sutlac.javaspringboot.talha.sutlac.model.Person;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository("postgres")
 public class PersonDataAccessService implements PersonDao {
     @Override
     public int insertPerson(UUID id, Person person) {
